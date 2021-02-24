@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xamarin.Styles"
+             x:Class="Xamarin.Styles.MainPage">
+
+    <ContentPage.Resources>
+        <!--Equivalente a HTML/CSS Document-->
+        <Style x:Key="EstiloLetra" TargetType="Button">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style x:Key="EstiloBoton"
+               BasedOn="{StaticResource EstiloLetra}"
+               TargetType="Button">
+            <Setter Property="WidthRequest" Value="100"/>
+            <Setter Property="TextColor" Value="Red" />
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Button Text="Botón"
+                Style="{StaticResource EstiloBoton}" />
+        <Button Text="boton">
+            <!--Equivalente a HTML/CSS Inline-->
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="Yellow"/>
+                    <Setter Property="TextColor" Value="Blue"/>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Text="Global" Style="{StaticResource EstiloBotonGlobal}"/>
+        <Button Text="Otro más" Style="{StaticResource EstiloBotonGlobal}" />
+        <Button Text="el ultimo"/>
+        <local:MyLabel Text="it's works" />
+    </StackLayout>
+
+</ContentPage>

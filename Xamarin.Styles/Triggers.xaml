@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.Styles.Triggers">
+    <ContentPage.Resources>
+        <Style x:Key="MyStyle" TargetType="Entry">
+            <Style.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="TextColor" Value="Red"/>
+                    <Setter Property="FontSize" Value="30"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Entry Style="{StaticResource MyStyle}"
+               Text="ingresa algo"/>
+        <Entry Text="ingresa algo"/>
+    </StackLayout>
+</ContentPage>

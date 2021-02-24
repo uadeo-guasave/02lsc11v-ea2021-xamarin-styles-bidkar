@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.Styles.App">
+    <Application.Resources>
+        <Style x:Key="EstiloBotonGlobal" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Aquamarine"/>
+            <Setter Property="TextColor" Value="Purple"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="Red" />
+        </Style>
+        <Style TargetType="Label" ApplyToDerivedTypes="True">
+            <Setter Property="TextColor" Value="Purple"/>
+        </Style>
+    </Application.Resources>
+</Application>
